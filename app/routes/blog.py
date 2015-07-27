@@ -4,7 +4,7 @@ from flask import Blueprint, render_template
 # '/blog' prepended to them.
 blog = Blueprint('blog', __name__, url_prefix='/blog')
 
-@blog.route('/blog')  # Accessible at /blog/
+@blog.route('/')  # Accessible at /blog/
 def blog_page():
     """The blog page."""
     return render_template('blog.html')
