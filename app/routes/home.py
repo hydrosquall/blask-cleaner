@@ -6,5 +6,3 @@ home = Blueprint('home', __name__)
 def home_page():
     """The home page."""
     return render_template('home.html')
-
-
