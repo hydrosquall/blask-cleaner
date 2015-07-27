@@ -10,3 +10,15 @@
 │   │   └── js/         # JavaScript files
 │   └── templates/      # HTML pages
 └── run.py              # The boot script
+
+Using VirtualEnv
+
+sudo apt-get install python-virtualenv
+virtualenv .
+source bin/activate
+(blask)$ pip install flask
+
+Freeze depencies:
+pip freeze > requirements.txt
+
+install dependencies: pip install -r requirements.txt
