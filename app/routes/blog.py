@@ -1,5 +1,6 @@
-from flask import Blueprint, render_template
-from app.models.blog import BlogPost
+from flask import Blueprint, render_template, redirect, url_for, request
+#last 3 imports are for the new form
+from app.models.blog import BlogPost, BlogPostForm
 
 # Create the blog Blueprint.  Note that all routes on the blog blueprint have
 # '/blog' prepended to them.
@@ -10,3 +11,14 @@ def blog_page():
     """The blog page."""
     posts = BlogPost.objects()
     return render_template('blog.html', posts=posts)
+
+@blog.route('/new', methods=['GET', 'POST'])
+def new():
+    """Create a new post"""
+    form = BlogPostForm(request.form)
+
+    if request.method =='POST' and form.validate():
+        form.save()
+        return redirect(url_for('blog.blog_page'))
+
+    return render_template('new.html', form =form)

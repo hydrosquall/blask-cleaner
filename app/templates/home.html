@@ -18,6 +18,9 @@
         <li>
           <a href="{{ url_for('blog.blog_page') }}">Blog</a>
         </li>
+          <li>
+          <a href="{{ url_for('blog.new') }}">Submit</a>
+        </li>
       </ul>
     </div>
   </nav>
@@ -25,6 +28,7 @@
     {% block content %}
     <h2>Welcome to Blask!</h2> {% endblock %}
   </div>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
   <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </body>
 

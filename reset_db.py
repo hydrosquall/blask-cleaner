@@ -2,7 +2,7 @@ from mongoengine import connect
 from app.models.blog import BlogPost
 
 connect('blask')
-#BlogPost.drop_collection()
+BlogPost.drop_collection()
 post1 = BlogPost(author='Cecelia Coder',
                  title='My First Blog Post',
                  body='Who knew this could be so easy?')

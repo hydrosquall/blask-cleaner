@@ -5,6 +5,7 @@ app = Flask(__name__)
 
 app.config['DEBUG'] = True
 app.config['MONGODB_SETTINGS'] = { 'db': 'blask' }
+app.config['SECRET_KEY'] = 'SOMERANDOSTRING'
 
 db = MongoEngine(app)
 

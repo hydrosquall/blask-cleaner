@@ -24,3 +24,19 @@ pip freeze > requirements.txt
 install dependencies: pip install -r requirements.txt
 
 every folder needs an init pi in it
+
+Blask
+=====
+
+A blog in Flask.
+
+## Running Blask
+
+```
+mongod &
+virtualenv .
+source bin/activate
+pip install -r requirements.txt
+python reset_db.py         # Optional: wipe the databse
+python run.py
+```
